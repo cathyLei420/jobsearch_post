@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+  <script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- <link type="text/css" rel="stylesheet" href="login.css"> -->
+</head>
+
+<body>
+  <div ng-controller="loginCtrl" class="row">
+    <div class="col-md-4 col-md-offset-4 text-center">
+      <div class="login-box">
+        <div class="caption">
+          <h3>Login</h3>
+        </div>
+        <form class="loginForm" action="/">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Username" ng-model="user.name" id="loginname">
+            <!-- <p ng-hide="user.name==null" class="col-md-12">Sorry, the field is empty!</p> -->
+            <input type="password" class="form-control" placeholder="Password" ng-model="user.password" id="loginpswd">
+            <!-- <p ng-hide="user.password==null" class="col-md-12">Sorry, the field is empty!</p> -->
+            <select class="form-control" ng-model="user.type" id="logintype"><option ng-repeat="x in types">{{x}}</option></select>
+            <input type="button" class="form-control" value="Login" ng-click="checkIfInput()">
+            <a class="form-control" href="#/register">Register</a>
+
+          </div>
+        </form>
+      </div>
+      <!-- end login-box -->
+    </div>
+    <!-- end col-md -->
+  </div>
+  <!-- end row -->
+  <!-- <script type="text/javascript" src="localhost:3000/js/myapp.js "></script> -->
+</body>
+
+</html>

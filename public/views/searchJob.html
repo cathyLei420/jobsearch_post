@@ -1,0 +1,49 @@
+<div ng-controller="searchjobCtrl" class="container">
+  <h1>Search Jobs</h1>
+  <div class="col-lg-12">
+    <div class="row">
+      <form>
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-4 form-group">
+              <label>Title</label>
+              <input type="text" placeholder="Enter Job Title Here.." class="form-control" ng-model="sjob.title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea placeholder="Enter Description Here.." rows="3" class="form-control" ng-model="sjob.description"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <textarea placeholder="Enter Location Here.." rows="3" class="form-control" ng-model="sjob.location"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Keywords</label>
+            <textarea placeholder="Enter Keywords Here.." rows="3" class="form-control" ng-model="sjob.phone"></textarea>
+          </div>
+          <button type="button" class="btn btn-lg btn-info" style="background : #fb044a;" ng-click="reset(sjob)">Reset</button>
+          <button type="button" class="btn btn-lg btn-info" ng-click="search()">Search</button>
+        </div>
+      </form>
+    </div>
+    <br />
+    <div class="col-lg-12">
+      <table class="table">
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Keyword</th>
+          <th>location
+            <th>
+        </tr>
+        <tr ng-repeat="job in searchRes">
+          <td>{{job.title}}</td>
+          <td>{{job.description}}</td>
+          <td>{{job.keywords}}</td>
+          <td>{{job.location}}</td>
+        </tr>
+        <table>
+    </div>
+  </div>
+</div>

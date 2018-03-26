@@ -1,0 +1,23 @@
+.search-box {
+  margin: 80px auto;
+  position: absolute;
+}
+
+.caption {
+  margin-bottom: 50px;
+}
+
+.loginForm input[type=text], .loginForm input[type=password] {
+  margin-bottom: 10px;
+}
+
+.loginForm input[type=button] {
+  background: #fb044a;
+  color: #fff;
+  font-weight: 700;
+  margin: 10px auto;
+}
+
+.registerBtn {
+  margin-top: 10px;
+}
